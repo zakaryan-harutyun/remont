@@ -138,10 +138,12 @@
         @foreach($reviews as $review)
             <div class="rev__block">
                 <div class="rev__crd_intro">
-                    <img src="{{asset('storage/'.$review->user->avatar)}}" alt="yandex">
-                    <h1>
-                        {{$review->user->name}}
-                    </h1>
+                    @if($review->user && $review->user->avatar)
+                        <img src="{{asset('storage/'.$review->user->avatar)}}" alt="yandex">
+                        <h1>
+                            {{$review->user->name}}
+                        </h1>
+                    @endif
                 </div>
                 <div class="rev__block__content">
                     <img src="{{asset('img/rev.svg')}}" alt="rev">
