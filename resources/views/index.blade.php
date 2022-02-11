@@ -160,7 +160,19 @@
             <h1>Статьи</h1>
         </div>
         <div class="article__cards">
-            <div class="art__card">
+            @foreach($news as $new)
+                <div class="art__card">
+                    <img src="{{asset('storage/'.$new->image)}}" alt="photo">
+                    <h1>{{$new->title}}</h1>
+                    <p>
+                        {{$new->text}}
+                    </p>
+                    <p class="art__date">
+                        {{$new->created_at}}
+                    </p>
+                </div>
+            @endforeach
+   {{--         <div class="art__card">
                 <img src="./img/article.svg" alt="photo">
                 <h1>Госпли развития</h1>
                 <p>
@@ -199,7 +211,7 @@
                 <p class="art__date">
                     11.02.2020
                 </p>
-            </div>
+            </div>--}}
         </div>
     </div>
     </div>
