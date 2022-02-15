@@ -58,7 +58,7 @@
                     Адрес: {{setting('site.address')}}
                 </p>
                 <p>
-                    Работаем {{setting('site.info')}}
+                     {{setting('site.info')}}
                 </p>
 
             </div>
