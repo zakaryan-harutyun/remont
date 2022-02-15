@@ -4,14 +4,15 @@
 @extends('layouts.main')
 @section('content')
     <div class="container">
-        <div class="models__phone">
+        <div>
             @foreach($services as $service)
-                    <div>
+                    <div style="padding:10px; border:1px solid black">
                         <div>{{$service->title}}</div>
                         <div>{{$service->description}}</div>
                     </div>
             @endforeach
+                <hr>
         </div>
     </div>
-    @include('partials.bottom-part')
+
 @endsection
