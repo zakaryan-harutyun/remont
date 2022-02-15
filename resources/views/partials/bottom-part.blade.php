@@ -2,7 +2,7 @@
 @inject('news', 'App\Models\News')
 
 
-<section class="info__cards wow bounceInLeft data-wow-duration=" 5s>
+<section styles="margin-top: 50px;" class="info__cards wow bounceInLeft data-wow-duration=" 5s>
     <div class="container">
         <div class="cards__ls">
             <div class="card__lk">
