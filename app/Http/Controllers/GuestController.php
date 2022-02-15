@@ -33,4 +33,10 @@ class GuestController extends Controller
         return view('services', compact('services'));
     }
 
+    public function repair()
+    {
+
+        return view('repair');
+    }
+
 }

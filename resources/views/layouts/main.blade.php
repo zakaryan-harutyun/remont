@@ -31,7 +31,7 @@
                 </div>
                 <div class="wow backInRight nav__right">
                     <li><a href="#">Переклейка</a></li>
-                    <li><a href="add__phone.html">Ремонт</a></li>
+                    <li><a href="{{route('repair')}}">Ремонт</a></li>
                     <li><a href="#">Выкуп</a></li>
                     <li><a href="#">Партнерамм</a></li>
                 </div>
