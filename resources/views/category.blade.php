@@ -18,7 +18,7 @@
                     @if($category->image)
                         <img src="{{asset('storage/'.$category->image)}}" alt="iphone">
                     @endif
-                    <a href="#">{{$category->name}}</a>
+                    <a href="{{route('service', $category->id)}}">{{$category->name}}</a>
                 </div>
             @endforeach
         </div>

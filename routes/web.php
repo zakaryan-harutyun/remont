@@ -24,3 +24,4 @@ Route::get('/', [App\Http\Controllers\GuestController::class, 'index'])->name('h
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 Route::get('/category/{id}', [App\Http\Controllers\GuestController::class, 'category'])->name('category');
+Route::get('/service/{id}', [App\Http\Controllers\GuestController::class, 'service'])->name('service');
