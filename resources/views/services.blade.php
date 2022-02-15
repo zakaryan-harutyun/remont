@@ -11,7 +11,6 @@
                         <div>{{$service->description}}</div>
                     </div>
             @endforeach
-                <hr>
         </div>
     </div>
 
