@@ -52,17 +52,15 @@
         <div class="footer__links">
             <div class="footer__link link__block1">
                 <p>
-                    Телефон: +7 (495) 374-64-74
+                    Телефон: {{setting('site.phone')}}
                 </p>
                 <p class="links2">
-                    Адрес: г. Москва, ул. Никольская 10 (ТРЦ "Никольская Плаза / Вокруг света")
+                    Адрес: {{setting('site.address')}}
                 </p>
                 <p>
-                    Работаем ежедневно 10:00 - 20:00,
+                    Работаем {{setting('site.info')}}
                 </p>
-                <p>
-                    без перерывов и выходных
-                </p>
+
             </div>
             <div class="footer__link link__block2">
                 <a href="#">
