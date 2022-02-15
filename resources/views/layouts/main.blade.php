@@ -33,7 +33,7 @@
                     <li><a href="#">Переклейка</a></li>
                     <li><a href="{{route('repair')}}">Ремонт</a></li>
                     <li><a href="#">Выкуп</a></li>
-                    <li><a href="#">Партнерамм</a></li>
+                    <li><a href="#">Партнерам</a></li>
                 </div>
             </div>
         </div>
