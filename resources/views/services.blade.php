@@ -6,7 +6,10 @@
     <div class="container">
         <div class="models__phone">
             @foreach($services as $service)
-                    <div>{{$service->name}}</div>
+                    <div>
+                        <div>{{$service->title}}</div>
+                        <div>{{$service->description}}</div>
+                    </div>
             @endforeach
         </div>
     </div>
