@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -15,6 +13,10 @@
     background-color: gray;
 }
 
+body {
+    background-color: #f9f9f9;
+}
+
 .container {
     width: 1440px;
     max-width: 100%;
@@ -23,10 +25,9 @@
 }
 
 header {
-    background-image: url('../img/bg.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    padding-bottom: 290px;
+    background-color: black;
+    height: 70px;
+    padding: 0px 0px;
 }
 
 .navbar {
@@ -52,9 +53,11 @@ header {
     list-style: none;
     display: flex;
 }
+
 .nv__ln_mb {
     display: flex;
 }
+
 .nav__links>a:after {
     display: block;
     position: absolute;
@@ -92,69 +95,87 @@ header {
     margin-left: 25px;
     position: relative;
 }
-.dr__iphone__links {
-    max-width: 400px;
-    width: 250px;
-    height: 200px;
-    background-color: #fff;
-    display: none;
-    transition: all 10s ease-in-out;
-    position: absolute;
+footer {
+    width: 100%;
+    background-color: #F4F4F4;
+    padding-bottom: 100px;
 }
 
-.dr__iphone__links a {
-    text-decoration: none;
-    color: #000;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    margin-left: 25px;
-    margin: 10px 10px;
-    position: relative;
+.footer__intro {
     display: flex;
-    flex-direction: column;
-    transition: all 10s ease-in-out;
+    justify-content: center;
+    padding-top: 40px;
 }
 
-.dr__iphone__links a:hover {
-    color: #fff;
-    background-color: #000;
-    transition: all .1s ease-in-out;
-    padding: 10px 10px;
+.footer__intro a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 6px;
+    margin-left: 7px;
 }
 
-.dr__iphone__links a:not(:hover) {
-    transition: all .1s ease-in-out;
+.footer__links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
-.dropdown__iphone:hover .dr__iphone__links {
+.footer__link a,
+p {
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.footer__link .links2 {
+    max-width: 318px;
+}
+
+.footer__link a:after {
     display: block;
-    transition: all 10s ease-in-out;
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    content: "";
+    transition: width 0.4s ease-out;
 }
 
-.info__block {
-    margin-top: 100px;
+.footer__link a:hover:after,
+.footer__link a:focus:after {
+    width: 100%;
 }
 
-.info__intro {
-    color: #fff;
+.link__block1 p {
+    margin-top: 15px;
 }
 
-.info__intro h1 {
-    max-width: 479px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 48px;
+.link__block2 a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin: 10px 0;
+    position: relative;
 }
 
-.info__intro p {
-    max-width: 389px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 28px;
-    line-height: 34px;
-    margin-top: 42px;
+.link__block3 a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin: 10px 0;
+    position: relative;
 }
 
-.info__cards {
+.link__block4 a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    margin: 15px 0;
+    position: relative;
+}
+
+info__cards {
     margin-top: 75px;
     display: flex;
 }
@@ -205,6 +226,7 @@ header {
     justify-content: center;
     margin: 30px auto;
 }
+
 .rev__block {
     display: block;
     width: 350px;
@@ -263,9 +285,11 @@ header {
     line-height: 28px;
     text-align: center;
 }
+
 .article__block {
     margin-top: 30px;
 }
+
 .article__cards {
     display: flex;
     margin: 30px auto;
@@ -300,10 +324,12 @@ header {
 .art__card img {
     width: 300px;
 }
+
 .art__card h1 {
-   font-family: 'Roboto', sans-serif;
-   margin: 10px 30px;
+    font-family: 'Roboto', sans-serif;
+    margin: 10px 30px;
 }
+
 .art__card p {
     max-width: 248px;
     font-family: 'Roboto', sans-serif;
@@ -325,112 +351,84 @@ header {
     color: #909090;
     margin-top: 25px;
 }
-
-footer {
-    width: 100%;
-    background-color: #F4F4F4;
-    padding-bottom: 100px;
+.add_phone {
+    margin-bottom: 300px;
+}
+.add_phone_column {
+    display: flex;
+}
+.iphone__xx {
+    width: 215px;
+    height: 230px;
+    border-radius: 100%;
+    padding: 30px 60px;
+    margin: 30px 30px;
+    box-shadow: 0px 4px 16px 0px #0000001A;
 }
 
-.footer__intro {
+.iphone__xx img {
+    width: 106px;
+    height: 135px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
-    padding-top: 40px;
 }
 
-.footer__intro a {
-    font-family: 'Roboto', sans-serif;
+.iphone__xx a {
     text-decoration: none;
-    color: black;
-    margin-top: 6px;
-    margin-left: 7px;
-}
-
-.footer__links {
+    text-align: center;
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: center;
+    color: #000;
+    margin: 10px 0px;
+    font-family: 'SF Compact Display Medium';
 }
 
-.footer__link a,
-p {
-    font-family: 'Roboto', sans-serif;
-    position: relative;
+.info__ph_intro {
+    font-family: 'SF Compact Display Medium';
+    margin-top: 50px;
+}
+.info__ph_intro h1 {
+    font-weight: 300;
+}
+.info__ph_intro p {
+    font-weight: 300;
+    margin-top: 16px;
 }
 
-.footer__link .links2 {
-    max-width: 318px;
-}
-
-.footer__link a:after {
-    display: block;
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-color: #000;
-    content: "";
-    transition: width 0.4s ease-out;
-}
-
-.footer__link a:hover:after,
-.footer__link a:focus:after {
-    width: 100%;
-}
-
-.link__block1 p {
-    margin-top: 15px;
-}
-
-.link__block2 a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin: 10px 0;
-    position: relative;
-}
-
-.link__block3 a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin: 10px 0;
-    position: relative;
-}
-
-.link__block4 a {
-    display: block;
-    text-decoration: none;
-    color: black;
-    margin: 15px 0;
-    position: relative;
-}
-
-@media only screen and (max-width: 1228px) {
+@media only screen and (max-width: 1289px) {
     .container {
         width: 1100px;
         max-width: 100%;
         padding: 0px 5px;
         margin: 0 auto;
     }
-    .info__intro {
-        margin-left: 30px;
+
+    .models__phone {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 0 auto;
+        justify-content: center;
     }
+
     .rev__block {
         margin: 20px 40px;
     }
+
     .art__card {
         margin: 20px 40px;
     }
+
     .tw__break {
         display: none;
     }
-    .article__block {
-        flex-direction: column;
-    }
+
     .article__cards {
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 450px 450px;
+        justify-content: center;
     }
+
     .art__card {
         justify-content: center;
         margin: 30px auto;
@@ -438,6 +436,13 @@ p {
 }
 
 @media only screen and (max-width: 860px) {
+    .models__phone {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
     li {
         display: none;
     }
@@ -445,14 +450,7 @@ p {
     header {
         background-color: #000;
         background-size: 100%;
-        padding-bottom: 121px;
-    }
-
-    .info__block {
-        flex-direction: column;
-        margin: 30px auto;
-        justify-content: center;
-        display: flex;
+        padding-bottom: 51px;
     }
 
     .cards__ls {
@@ -471,42 +469,39 @@ p {
         flex-direction: column;
     }
 
+    .article__cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
     .art__card_tw {
         flex-direction: column;
     }
 
     .footer__links {
         flex-direction: column;
-    }
-
-    .link__block1,
-    .link__block2,
-    .link__block3,
-    .link__block4 {
-        margin: 30px auto;
+        margin: 0 auto;
         text-align: center;
     }
 }
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: 480px) {
+    .models__phone {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
     .nv__ln_mb {
         display: none;
     }
-
-    .dropdown__iphone {
-        display: none;
+    .add_phone {
+        margin-bottom: 80px;
     }
-
-    .card__intro p {
-        font-family: 'Roboto', sans-serif;
-        font-size: 16px;
-        max-width: 149px;
-        margin-top: 15px;
-    }
-
-    .info__intro h1 {
-        max-width: 972px;
-        font-family: 'Roboto', sans-serif;
-        font-size: 38px;
+    .add_phone_column {
+        flex-direction: column;
+        justify-content: center;
     }
 }

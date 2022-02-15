@@ -1,4 +1,10 @@
 @extends('layouts.main')
+@push('styles')
+    <link rel='stylesheet' href='{{asset('css/style.css')}}'>
+@endpush
+@section('header-part')
+    @include('partials.header')
+@endsection
 @section('content')
 <section class="info__cards wow bounceInLeft data-wow-duration=" 5s>
     <div class="container">
@@ -146,7 +152,11 @@
                     @endif
                 </div>
                 <div class="rev__block__content">
-                    <img src="{{asset('img/rev.svg')}}" alt="rev">
+                    @if($review->rate && $review->rate > 0)
+                        <img src="{{asset('img/'.$review->rate.'star.jfif')}}" alt="rev">
+                    @else
+                        <img src="{{asset('img/rev.svg')}}" alt="rev">
+                    @endif
                     <hr>
                     <p>
                       {{$review->text}}

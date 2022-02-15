@@ -1,3 +1,5 @@
+@inject('categories', 'App\Models\Category')
+
 <!DOCTYPE html>
 <html lang='ru'>
 
@@ -6,10 +8,12 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Apple</title>
-    <link rel='stylesheet' href='{{asset('css/style.css')}}'>
+    @stack('styles')
+    <link rel='stylesheet' href='{{asset('fonts/sf-compact-display/style.css')}}'>
     <link rel="stylesheet" href="{{asset('css/animate.css')}}">
     <link rel="stylesheet" href="{{asset('libs/slick/slick.css')}}">
     <link rel="stylesheet" href="{{asset('libs/slick/slick-theme.css')}}">
+
 </head>
 
 <body>
@@ -18,44 +22,22 @@
         <div class="navbar">
             <div class="nav__links">
                 <div class="nav__left wow backInLeft">
-                    <a href="#"><img src="./img/apple.svg" alt="apple__logo"></a>
-                    <div class="dropdown__iphone">
-                        <li><a href="#">iPhone</a></li>
-                        <div class="dr__iphone__links">
-                            <a href="#">Iphone 8</a>
-                            <a href="#">Iphone xs</a>
-                            <a href="#">Iphone 13 mini</a>
-                            <a href="#">Iphone 11 pro</a>
-                            <a href="#">Iphone 12 pro max</a>
-                        </div>
-                    </div>
+                    <a href="#"><img src="{{asset('img/apple.svg')}}" alt="apple__logo"></a>
                     <div class="nv__ln_mb">
-                        <li><a href="#">iPad</a></li>
-                        <li><a href="#">Macbook</a></li>
-                        <li><a href="#">iMac</a></li>
-                        <li><a href="#">Samsung</a></li>
+                            @foreach($categories->where('category_id', null)->get() as $category)
+                                <li><a href="{{route('category', $category->id)}}">{{$category->name}}</a></li>
+                            @endforeach
                     </div>
                 </div>
                 <div class="wow backInRight nav__right">
                     <li><a href="#">Переклейка</a></li>
-                    <li><a href="#">Ремонт</a></li>
+                    <li><a href="add__phone.html">Ремонт</a></li>
                     <li><a href="#">Выкуп</a></li>
                     <li><a href="#">Партнерамм</a></li>
                 </div>
             </div>
         </div>
-        <div class="info__block">
-            <div class="info__intro wow bounceInLeft data-wow-duration=" 5s>
-                <h1>
-                    Переклейка дисплея любого iPhone
-                </h1>
-                <p>
-                    Оригинальные запчасти
-                    Разумные цены
-                    Выезд
-                </p>
-            </div>
-        </div>
+        @yield('header-part')
     </div>
 </header>
 <main>
@@ -64,7 +46,7 @@
 <footer>
     <div class="container">
         <div class="footer__intro wow bounceInLeft data-wow-duration=" 5s>
-            <img src="./img/app_dark.svg" alt="apple">
+            <img src="{{asset('img/app_dark.svg')}}" alt="apple">
             <a href="#">iservice</a>
         </div>
         <div class="footer__links">
