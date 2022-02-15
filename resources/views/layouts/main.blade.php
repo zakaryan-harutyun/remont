@@ -22,7 +22,7 @@
         <div class="navbar">
             <div class="nav__links">
                 <div class="nav__left wow backInLeft">
-                    <a href="#"><img src="{{asset('img/apple.svg')}}" alt="apple__logo"></a>
+                    <a href="{{route('index')}}"><img src="{{asset('img/apple.svg')}}" alt="apple__logo"></a>
                     <div class="nv__ln_mb">
                             @foreach($categories->where('category_id', null)->get() as $category)
                                 <li><a href="{{route('category', $category->id)}}">{{$category->name}}</a></li>
