@@ -19,9 +19,10 @@ class GuestController extends Controller
 
     public function category($id)
     {
+        $category = Category::findOrFail($id);
         $categories = Category::where('category_id', $id)->get();
 
-        return view('category', compact('categories'));
+        return view('category', compact('categories','category'));
     }
 
 }

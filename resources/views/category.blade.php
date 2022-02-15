@@ -3,11 +3,11 @@
 @endpush
 @extends('layouts.main')
 @section('content')
-    <div class="info__block">
+    <div class="info__block mb-4">
         <div class="container">
             <div class="info__intro">
-                <h1>Ремонт iPhone</h1>
-                <p>Выберите модель iPhone, чтобы узнать стоимость ремонта.</p>
+                <h1>Ремонт {{$category->name}}</h1>
+                <p>Выберите модель {{$category->name}}, чтобы узнать стоимость ремонта.</p>
             </div>
         </div>
     </div>
