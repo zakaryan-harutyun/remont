@@ -149,7 +149,7 @@
                 </div>
                 <div class="rev__block__content">
                     @if($review->rate && $review->rate > 0)
-                        <img src="{{asset('img/'.$review->rate.'star.jfif')}}" alt="rev">
+                        <img src="{{asset('img/'.$review->rate.'star.png')}}" alt="rev">
                     @else
                         <img src="{{asset('img/rev.svg')}}" alt="rev">
                     @endif
