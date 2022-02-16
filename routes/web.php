@@ -27,3 +27,7 @@ Route::get('/category/{id}', [App\Http\Controllers\GuestController::class, 'cate
 Route::get('/service/{id}', [App\Http\Controllers\GuestController::class, 'service'])->name('service');
 
 Route::get('/repair', [App\Http\Controllers\GuestController::class, 'repair'])->name('repair');
+
+Route::get('/chat', [App\Http\Controllers\UserController::class, 'chat'])->name('chat');
+Route::get('/add-conversation/{id}', [App\Http\Controllers\UserController::class, 'addConversation'])->name('add-conversation');
+Route::post('/message', [App\Http\Controllers\UserController::class, 'sendMessage'])->name('send-message');
